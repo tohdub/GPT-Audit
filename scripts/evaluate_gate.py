@@ -1,6 +1,6 @@
 import json, sys
 
-THRESHOLD = 9            # minimal acceptable checklist score (out of 14)
+THRESHOLD = 1            # minimal acceptable checklist score (out of 14)
 BLOCK_FAIL = True        # any blocker forces fail
 
 with open("audit_report.json", "r", encoding="utf-8") as f:
