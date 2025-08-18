@@ -1,0 +1,31 @@
+name: GPT Audit
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install pyyaml
+      - name: Validate input
+        run: |
+          python scripts/validate_input.py templates/audit_input.sample.yaml
+      - name: Dry-run audit
+        run: |
+          python scripts/audit_runner.py templates/audit_input.sample.yaml --mode full_audit > audit_payload.json
+      - name: Evaluate gate (placeholder)
+        run: |
+          echo "PASS" > audit_status.txt
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-artifacts
+          path: |
+            audit_payload.json
+            audit_status.txt
