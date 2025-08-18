@@ -1,0 +1,27 @@
+project:
+  name: Example Project
+  vision: Enable fast, safe support automation with clear explanations.
+  success_criteria: ["≥90% helpfulness", "p95 latency ≤ 2.5s", "no PII leaks in red‑team"]
+artifacts:
+  prompts: ["/prompts/*.md"]
+  evals: ["/evals/design.md", "/dashboards/helpfulness.json"]
+  apis: ["/api/openapi.yaml"]
+  automations: ["/workflows/zapier.yaml", "/ci/pipeline.yaml"]
+  ux: ["/design/flows.pdf"]
+standards:
+  writing: ["/standards/writing.md"]
+  compliance: ["/standards/compliance.md"]
+  ux: ["/standards/ux.md"]
+  api: ["/standards/api.md"]
+tool_stack:
+  models: ["chatgpt", "claude", "gemini"]
+  runtime: ["n8n", "Zapier", "Power Automate"]
+  storage: ["Postgres", "Sheets"]
+  observability: ["OpenTelemetry", "Dashboard XYZ"]
+ssot:
+  repos:
+    - url: https://github.com/yourorg/yourrepo
+      commit: 0123456789abcdef0123456789abcdef01234567
+mode: full_audit
+audience: mixed
+priorities: ["quality", "latency", "cost", "safety", "UX"]
