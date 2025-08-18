@@ -1,0 +1,3 @@
+- Keep standards versioned; update SSOT links with commit SHAs.
+- Add new expert roles only with accompanying checklists.
+- All normative changes require examples and citations.
