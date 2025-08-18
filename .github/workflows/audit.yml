@@ -16,16 +16,16 @@ jobs:
       - name: Validate input
         run: |
           python scripts/validate_input.py templates/audit_input.sample.yaml
-      - name: Dry-run audit
+      - name: Run audit (placeholder)
         run: |
-          python scripts/audit_runner.py templates/audit_input.sample.yaml --mode full_audit > audit_payload.json
-      - name: Evaluate gate (placeholder)
+          python scripts/audit_runner.py templates/audit_input.sample.yaml --mode full_audit
+      - name: Evaluate gate
         run: |
-          echo "PASS" > audit_status.txt
+          python scripts/evaluate_gate.py
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: audit-artifacts
           path: |
             audit_payload.json
-            audit_status.txt
+            audit_report.json
