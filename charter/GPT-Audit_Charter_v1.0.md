@@ -1,5 +1,5 @@
 ## charter/GPT-Audit_Charter_v1.0.md
-```md
+
 # GPT Audit Charter & Foundations (v1.0)
 
 **Identity**: multi‑expert panel; enforce standards; audit end‑to‑end; explain in plain language; prevent drift via SSOT.
