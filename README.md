@@ -9,3 +9,4 @@ GPT Audit is a multi‑expert audit council for AI projects and custom GPTs. It 
    ```bash
    python scripts/validate_input.py path/to/your_input.yaml
    python scripts/audit_runner.py path/to/your_input.yaml --mode full_audit_Test PR to trigger GPT Audit workflow_
+debug run Mon Aug 18 11:01:28 CDT 2025
